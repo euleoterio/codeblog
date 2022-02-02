@@ -23,7 +23,7 @@ public class CodeBlogController {
 	@Autowired
 	CodeBlogService service;
 
-	@RequestMapping(value = "/posts", method = RequestMethod.GET)
+	@RequestMapping(value = {"/", "/posts"}, method = RequestMethod.GET)
 	public ModelAndView getPosts() {
 		ModelAndView mv = new ModelAndView("posts");
 		List<CreatePost> posts = service.findAll();
