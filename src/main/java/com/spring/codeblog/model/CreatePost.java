@@ -19,22 +19,22 @@ import lombok.Data;
 @Data
 public class CreatePost {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
-	
-	@NotBlank
-	private String title;
-	
-	@NotBlank
-	private String author;
-	
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
-	private LocalDate date;
-	
-	@NotBlank
-	@Lob
-	private String text;
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private Long id;
+
+    @NotBlank
+    private String title;
+
+    @NotBlank
+    private String author;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "dd-MM-yyyy")
+    private LocalDate date;
+
+    @NotBlank
+    @Lob
+    private String text;
 	
 //	@NotBlank para garantir que não terá valor em branco
 //	@Lob informa que receberá textos no campo
